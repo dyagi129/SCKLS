@@ -20,8 +20,6 @@ K = BandwidthKNN(X,y,'gaussian','Leave-one-out CV');
 % Variable bandwidth
 [yhat2,alpha_hat2,beta_hat2,x2] = SCKLS(X,y,'variable','percentile','gaussian',100,K,[],1,1);
 
-% [p_value] = shape_test(X,y,100,100,1,1);
-
 % Compute functional estimate
 yhat_obs = functional_estimate(alpha_hat,beta_hat,X,0);
 yhat_obs2 = functional_estimate(alpha_hat2,beta_hat2,X,0);
